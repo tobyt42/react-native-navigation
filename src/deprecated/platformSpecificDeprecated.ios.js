@@ -728,7 +728,7 @@ function savePassProps(params) {
     PropRegistry.save(params.navigationParams.screenInstanceID, params.passProps);
   }
 
-  if (params.screen && params.screen.passProps) {
+  if (params.screen && params.screen.passProps && params.screen.navigationParams && params.screen.navigationParams.screenInstanceID) {
     PropRegistry.save(params.screen.navigationParams.screenInstanceID, params.screen.passProps);
   }
 
